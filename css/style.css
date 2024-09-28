@@ -1,0 +1,131 @@
+/*------------------------------------
+[Master Stylesheet]
+
+Project:	hqbm.ru
+Version:	1.0.0
+Primary user: hqbm.ru
+------------------------------------*/
+
+/* ----------------------------------
+[Table of contents]
+
+1.	Fonts
+2.	Common styles
+3.	Header
+------------------------------------*/
+
+/* ==================================
+	Font
+/* =================================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* ==================================
+	Common styles
+/* =================================*/
+
+:root {
+	--robot: "Roboto", Arial, sans-serif;
+	--spectral: "Spectral", Arial, sans-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--robot);
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	background-color: white;
+}
+.wrapper {
+	overflow: hidden;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ======================
+	Header styles
+=======================*/
+
+header {
+	padding: 15px 0;
+	border-bottom: 1px solid white;
+}
+
+header .header-logo {
+	font-family: var(--spectral);
+	font-weight: 300;
+	font-size: 25px;
+	letter-spacing: 1px;
+	color: white;
+}
+
+header .header-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	column-gap: 40px;
+}
+.nav-links .nav-links__item {
+	font-size: 14px;
+	color: white;
+}
+
+/* ===========================
+	Home
+=========================== */
+
+.home-main {
+	background: url("../images/home-bg.jpg") no-repeat;
+	background-position: fixed;
+	height: 90vh;
+	min-height: 770px;
+}
+
+.home-wrapper {
+	padding-top: 200px;
+}
+.home-wrapper .home-title {
+	font-family: var(--spectral);
+	font-weight: 300;
+	font-size: 55px;
+	letter-spacing: 1px;
+	color: white;
+}
+
+.home-wrapper .home-title em {
+	display: inline-block;
+	transform: translate(-50px, 40px);
+}
+
+.home-wrapper .home-txt {
+	font-weight: 300;
+	font-size: 16px;
+	padding-top: 10px;
+	border-top: 1px solid white;
+	margin-top: 70px;
+	margin-left: auto;
+	max-width: 400px;
+	color: white;
+}
