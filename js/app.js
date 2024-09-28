@@ -11,3 +11,28 @@ function togleAccording() {
 		accordionBtn.style.transform = 'rotate(-45deg)'
 	}
 }
+
+const productModal = document.querySelectorAll('.modal-body');
+const modalContent = document.querySelector('.modal-container');
+const body = document.querySelector('body');
+const closeBtn = document.querySelectorAll('.close-btn')
+function openModal(num) {
+	productModal.forEach(item => {
+		item.style.display = 'none';
+	})
+	productModal.forEach(item => {
+		let productNum = item.getAttribute('product-num');
+		modalContent.classList.add('show');
+		body.style.overflow = 'hidden';
+		if (num == productNum) {
+			item.style.display = 'block';
+		}
+	});
+}
+
+closeBtn.forEach(item => {
+	item.addEventListener('click', () => {
+		modalContent.classList.remove('show');
+		body.style.overflow = 'auto';
+	});
+})
