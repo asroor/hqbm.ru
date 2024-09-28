@@ -169,6 +169,7 @@ header .header-wrapper {
 .buy-cards .card {
 	width: 100%;
 	max-width: calc(100% / 3 - 15px);
+	cursor: pointer;
 }
 .buy-cards .card img {
 	aspect-ratio: 2/2;
@@ -519,6 +520,19 @@ footer .footer-wrap {
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	display: none;
+	animation-name: modalAnimation;
+	animation-duration: 0.7s;
+	animation-delay: 0;
+}
+@keyframes modalAnimation {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 .modal-body::-webkit-scrollbar {
 	display: none;
