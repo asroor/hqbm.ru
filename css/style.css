@@ -14,6 +14,10 @@ Primary user: hqbm.ru
 3.	Header
 4.	Home
 5.	Buy
+6.	Proven
+7.	About
+8.	Contact
+9.	Footer
 ------------------------------------*/
 
 /* ==================================
@@ -51,6 +55,10 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	background-color: white;
+}
+a,
+button {
+	cursor: pointer;
 }
 .wrapper {
 	overflow: hidden;
@@ -181,4 +189,281 @@ header .header-wrapper {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.buy-about {
+	width: 100%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: 20%;
+	margin-top: 120px;
+	margin-bottom: 30px;
+}
+.buy-about > * {
+	color: #646464;
+}
+
+.buy-about h1 {
+	font-family: var(--spectral);
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 48px;
+	margin-bottom: 30px;
+}
+.buy-about p {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 300;
+}
+
+.buy-accordion {
+	width: 100%;
+	border-top: 1px solid #eee;
+}
+.accordion-head {
+	width: 100%;
+	padding: 27px 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accordion-head .accordion-btn {
+	border: none;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: ease 0.3s;
+	border-radius: 50%;
+}
+.accordion-head:hover .accordion-btn {
+	background-color: #eee;
+}
+.accordion-head h2 {
+	font-family: "Spectral";
+	font-size: 22px;
+	font-weight: 300;
+	color: #646464;
+}
+.accordion-body {
+	overflow: hidden;
+	height: 100%;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+}
+
+/* ========================
+	Proven
+======================== */
+
+#proven {
+	background: url(../images/proven-bg.jpg) no-repeat;
+	background-attachment: fixed;
+	height: 700px;
+}
+.proven-title {
+	width: 100%;
+	max-width: 600px;
+	text-align: center;
+	color: white;
+	padding-top: 200px;
+	margin: 0 auto;
+}
+
+.proven-title h4 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: 400;
+}
+.proven-title h1 {
+	font-family: var(--spectral);
+	font-size: 40px;
+	line-height: 62px;
+	font-weight: 300;
+}
+
+.proven-title p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.proven-title a {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 400;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;
+	display: inline-block;
+	margin-top: 100px;
+}
+
+.ingredient {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 30px;
+	padding-top: 50px;
+	padding-bottom: 270px;
+}
+.ingredient-images {
+	width: 475px;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.ingredient-images img:last-child {
+	max-width: 350px;
+	max-height: 524px;
+	position: absolute;
+	bottom: calc(-100% / 2 + 150px);
+	right: calc(-100% / 2 + 30px);
+}
+
+.ingredient-about {
+	padding-top: 100px;
+	color: #646464;
+	max-width: 450px;
+}
+.ingredient-about h1 {
+	font-family: var(--spectral);
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+.ingredient-about p {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.proven-two {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../images/proven-bg2.png) !important;
+}
+.proven-two .proven-title {
+	padding: 0;
+}
+
+/* ====================
+	About
+==================== */
+
+#about {
+	padding: 100px 0;
+}
+#about .about-title {
+	font-family: var(--spectral);
+	font-size: 40px;
+	font-weight: 300;
+	color: #646464;
+	text-align: center;
+}
+
+.about-images {
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 100%;
+	max-width: calc(100% - 300px);
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	row-gap: 50px;
+	column-gap: 150px;
+}
+
+.about-images img {
+	width: 100%;
+	max-width: 200px;
+	object-fit: contain;
+}
+
+/* =======================
+	Contact
+======================= */
+#contact {
+	border-bottom: 1px solid #dfdfdf;
+	border-top: 1px solid #dfdfdf;
+}
+.contact-wrap {
+	padding: 100px 0;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 50px;
+}
+.info-column {
+	display: flex;
+	align-items: flex-start;
+}
+.info-column:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.info-column h4 {
+	max-width: 150px;
+	min-width: 72px;
+	font-family: var(--spectral);
+	font-size: 16px;
+	color: #646464;
+	line-height: 22px;
+	font-weight: 300;
+	margin-right: 40px;
+}
+.info-column p,
+.info-column a {
+	font-family: var(--spectral);
+	font-size: 16px;
+	color: #969696;
+	font-weight: 300;
+	line-height: 22px;
+	max-width: 320px;
+}
+/* =======================
+	Footer
+======================= */
+
+footer {
+	padding: 100px 0;
+}
+footer .footer-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.footer-wrap h1 {
+	font-family: var(--spectral);
+	font-size: 25px;
+	font-weight: 300;
+	color: #646464;
+	line-height: 34px;
+	max-width: 340px;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+.footer-links a {
+	color: #646464;
+	font-size: 16px;
+}
+
+.footer-bottom {
+	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+	column-gap: 100px;
+}
+.footer-bottom p {
+	font-size: 10px;
+	font-weight: 300;
+	color: #646464;
 }
