@@ -12,6 +12,8 @@ Primary user: hqbm.ru
 1.	Fonts
 2.	Common styles
 3.	Header
+4.	Home
+5.	Buy
 ------------------------------------*/
 
 /* ==================================
@@ -98,7 +100,7 @@ header .header-wrapper {
 
 .home-main {
 	background: url("../images/home-bg.jpg") no-repeat;
-	background-position: fixed;
+	background-attachment: fixed;
 	height: 90vh;
 	min-height: 770px;
 }
@@ -124,8 +126,59 @@ header .header-wrapper {
 	font-size: 16px;
 	padding-top: 10px;
 	border-top: 1px solid white;
-	margin-top: 70px;
+	margin-top: 75px;
 	margin-left: auto;
 	max-width: 400px;
 	color: white;
+	line-height: 160%;
+}
+
+/* =====================
+	Buy
+===================== */
+#buy {
+	padding-top: 50px;
+}
+
+.buy-cards {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 30px;
+}
+
+.buy-cards .card {
+	width: 100%;
+	max-width: calc(100% / 3 - 15px);
+}
+.buy-cards .card img {
+	aspect-ratio: 2/2;
+	object-fit: contain;
+}
+
+.buy-cards .card .card-txt {
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: 160%;
+	color: black;
+}
+
+.buy-cards .card em {
+	font-family: var(--spectral);
+	font-size: 18px;
+	font-weight: 300;
+	margin: 10px 0;
+	display: block;
+}
+
+.buy-cards .card button {
+	font-family: var(--spectral);
+	font-size: 14px;
+	font-style: italic;
+	padding: 12px 30px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
