@@ -587,3 +587,258 @@ footer .footer-wrap {
 .modal-about p a {
 	color: #646464;
 }
+
+.basket-modal-container {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: none;
+}
+.basket-modal-container.show {
+	display: block;
+}
+.basket-modal-content {
+	position: absolute;
+	top: 0;
+	z-index: 5;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 560px;
+	height: 100vh;
+	overflow-y: scroll;
+	padding-top: 70px;
+}
+.basket-modal-content::-webkit-scrollbar {
+	display: none;
+}
+.close-bg {
+	position: fixed;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.basket-modal-close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 5;
+	background-color: transparent;
+	border: none;
+}
+
+.basket-modal-body {
+	background-color: white;
+	padding: 40px;
+	animation-name: modalAnimation;
+	animation-duration: 0.5s;
+	animation-delay: 0;
+}
+.basket-modal-body .basket-title {
+	font-family: var(--spectral);
+	font-size: 24px;
+	font-weight: 400;
+	color: black;
+	font-style: italic;
+}
+
+.basket-products {
+	margin: 20px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.basket-products .product-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 10px;
+	padding-top: 15px;
+}
+
+.product-list .product-img {
+	width: 70px;
+	flex-shrink: 0;
+}
+
+.product-list a {
+	color: black;
+	font-family: var(--spectral);
+	line-height: 1.55;
+	font-style: italic;
+	margin-right: auto;
+	width: 100%;
+	max-width: 205px;
+}
+
+.product-calc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 5px;
+	min-width: 100px;
+}
+.product-calc img {
+	flex-shrink: 0;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.remove-product-btn {
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	border: none;
+	background-color: transparent;
+	opacity: 0.5;
+}
+.product-list:hover .product-calc img,
+.product-list:hover .remove-product-btn {
+	opacity: 1;
+}
+.product-calc input[type="number"] {
+	min-width: 20px;
+	width: 20px;
+	padding: 2px 5px;
+	-moz-appearance: textfield;
+	font-family: var(--spectral);
+	font-size: 16px;
+	line-height: 16px;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+.product-list input:hover {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.product-calc input::-webkit-outer-spin-button,
+.product-list input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+.product-calc input[type="number"]:focus {
+	width: 40px;
+	border: 2px solid black;
+}
+
+.product-list-price {
+	min-width: 80px;
+	text-align: left;
+}
+.product-list-price h5 {
+	font-family: var(--spectral);
+	font-weight: 300;
+	font-size: 16px;
+}
+
+h4.all-price {
+	font-family: var(--spectral);
+	font-size: 16px;
+	text-align: end;
+	font-style: italic;
+	margin-bottom: 40px;
+}
+
+.modal-series > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.series label {
+	font-family: var(--spectral);
+	font-weight: 300;
+	font-size: 16px;
+	margin-bottom: 5px;
+	display: block;
+}
+.series input:not([type="radio"]):not([type="checkbox"]),
+.series textarea {
+	width: 100%;
+	height: 55px;
+	border: 1px solid #000000;
+	color: #000000;
+	padding: 0 20px;
+}
+
+.series textarea {
+	height: 100px;
+}
+.series .min-title {
+	font-size: 16px;
+	font-family: var(--spectral);
+	margin-bottom: 5px;
+	font-weight: 300;
+}
+.check-list input[type="radio"] {
+	border-radius: 50%;
+}
+.check-list input[type="radio"],
+.check-list input[type="checkbox"] {
+	border: 2px outset black;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	margin-right: 5px;
+}
+.check-list input[type="radio"]::before,
+.check-list input[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+.check-list input[type="checkbox"]::before {
+	content: "";
+	border: solid #000;
+	border-width: 0 2px 2px 0;
+	height: 8px;
+	left: 6px;
+	position: absolute;
+	top: 2px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 3px;
+	border-radius: 0;
+	display: none;
+}
+.check-list input[type="radio"]:checked::before {
+	background-color: black;
+}
+.check-list input[type="checkbox"]:checked::before {
+	display: block;
+}
+.check-list label {
+	font-family: var(--robot);
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.modal-bottom {
+	margin-top: 50px;
+	text-align: end;
+}
+
+.modal-bottom h5,
+b {
+	font-family: var(--spectral);
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
+}
+.modal-bottom b {
+	font-weight: 600;
+	font-size: 16px;
+}
+.basket-btn {
+	width: 100%;
+	border-radius: 0;
+	margin-top: 25px;
+}

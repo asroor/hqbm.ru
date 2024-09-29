@@ -144,7 +144,7 @@
 		<div class="container">
 			<div class="ingredient">
 				<div class="ingredient-images">
-					<img data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="900"
+					<img data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="900"
 						src="images/ingredient2.jpg" alt="ingredient img 1" width="100%" height="100%">
 					<img data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="900"
 						src="images/ingredient1.jpg" alt="ingredient img 2" width="100%" height="100%">
@@ -400,23 +400,108 @@
 		</div>
 	</div>
 	<div class="basket-modal-container">
-		<button class="basket-modal-close modal-close">
+		<button class="basket-modal-close close-btn">
 			<img src="images/x-white.svg" alt="close icon" width="23" height="23">
 		</button>
+		<div class="close-bg close-btn"></div>
 		<div class="basket-modal-content">
 			<div class="basket-modal-body">
 				<h1 class="basket-title">Ваш заказ: </h1>
 				<div class="basket-products">
 					<div class="product-list">
 						<div class="product-img">
-							<img src="images/card4.jpg" alt="">
+							<img src="images/card4.jpg" alt="product img" width="100%" height="100%">
 						</div>
-						<h3> Бальзам для лимфодренажного массажа с клинически доказанным действием, 250 мл</h3>
+						<a href="#"> Бальзам для лимфодренажного массажа с клинически доказанным действием, 250 мл</a>
 						<div class="product-calc">
+							<img src="images/arrows_circle_minus.svg" alt="minus icon" width="16" height="16">
 							<input type="number" value="1">
+							<img src="images/arrows_circle_plus.svg" alt="plus icon" width="16" height="16">
+						</div>
+						<div class="product-list-price">
+							<h5>25 500 &#8381;</h5>
+						</div>
+						<button type="button" class="remove-product-btn">
+							<img src="images/arrows_circle_remove.svg" alt="remove icon" width="100%" height="100%">
+						</button>
+					</div>
+					<div class="product-list">
+						<div class="product-img">
+							<img src="images/card1.jpeg" alt="product img" width="100%" height="100%">
+						</div>
+						<a href="#">Крем для рук</a>
+						<div class="product-calc">
+							<img src="images/arrows_circle_minus.svg" alt="minus icon" width="16" height="16">
+							<input type="number" value="1">
+							<img src="images/arrows_circle_plus.svg" alt="plus icon" width="16" height="16">
+						</div>
+						<div class="product-list-price">
+							<h5>8 000 &#8381;</h5>
+						</div>
+						<button type="button" class="remove-product-btn">
+							<img src="images/arrows_circle_remove.svg" alt="remove icon" width="100%" height="100%">
+						</button>
+					</div>
+				</div>
+				<h4 class="all-price">Сумма: 33 800 &#8381;</h4>
+				<div class="modal-series">
+					<div class="series">
+						<label for="s1">ФИО получателя</label>
+						<input id="s1" type="text">
+					</div>
+					<div class="series">
+						<label for="s2">Ваша почта</label>
+						<input id="s2" type="text">
+					</div>
+					<div class="series">
+						<label for="s3">Телефон получателя</label>
+						<input id="s3" type="number">
+					</div>
+					<div class="series">
+						<h4 class="min-title">Доставляем заказ: </h4>
+						<div class="check-list">
+							<input type="radio" id="r1" name="delivery" value="courier">
+							<label for="r1">в пункт выдачи СДЭК (можно забрать в удобное время и не зависеть от курьера) — 390
+								руб.</label>
+							<input type="radio" id="r2" name="delivery" value="courier">
+							<label for="r2">курьером — 400 руб.</label>
+							<input type="radio" id="r3" name="delivery" value="courier">
+							<label for="r3">в отделение Почты России — 400 руб.</label>
+						</div>
+					</div>
+					<div class="series">
+						<label for="textArea1">Укажите адрес пункта выдачи СДЭК / отделения Почты / ваш адрес, если вы выбрали
+							доставку курьером
+						</label>
+						<textarea name="" id="textArea1"></textarea>
+					</div>
+					<div class="series">
+						<label for="textArea2">Если у вас есть пожелания, укажите их здесь
+						</label>
+						<textarea name="" id="textArea2"></textarea>
+					</div>
+					<div class="series">
+						<div class="check-list">
+							<input id="check1" type="checkbox" checked>
+							<label for="check1">Запомнить контакты в браузере для повторной покупки </label>
+						</div>
+					</div>
+					<div class="series">
+						<div class="check-list">
+							<h4 class="min-title">Способ оплаты </h4>
+							<input id="radio1" type="radio" checked>
+							<label for="radio1">Запомнить контакты в браузере для повторной покупки </label>
+							<input id="radio2" type="radio">
+							<label for="radio2">оплата по счету (для юр. лиц и ИП) </label>
 						</div>
 					</div>
 				</div>
+				<div class="modal-bottom">
+					<h5>Сумма: <span>343 643 244 000</span> ₽ </h5>
+					<h5>в отделение Почты России — <span>400</span> руб.:<span>400</span> ₽</h5>
+					<b>Итоговая сумма: <span>343 643 244 400</span>₽ </b>
+				</div>
+				<button type="button" class="basket-btn def-btn">Заказать</button>
 			</div>
 		</div>
 	</div>
