@@ -19,6 +19,7 @@ Primary user: hqbm.ru
 8.	Contact
 9.	Footer
 10.	Modals
+11.	Responsive
 ------------------------------------*/
 
 /* ==================================
@@ -503,6 +504,9 @@ footer .footer-wrap {
 	border: none;
 	font-weight: 300;
 }
+.close-bodal img {
+	display: none;
+}
 
 .close-bodal::before {
 	content: "←";
@@ -652,13 +656,20 @@ footer .footer-wrap {
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 .basket-products .product-list {
+	padding-top: 15px;
+}
+
+.basket-products .product-list,
+.product-list .product-list__left,
+.product-list .product-list__right {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	column-gap: 10px;
-	padding-top: 15px;
+}
+.product-list .product-list__left {
+	width: calc(50% + 10px);
 }
 
 .product-list .product-img {
@@ -841,4 +852,378 @@ b {
 	width: 100%;
 	border-radius: 0;
 	margin-top: 25px;
+}
+
+/* =====================
+	Responsive
+===================== */
+
+@media (max-width: 1250px) {
+	.container {
+		max-width: 980px;
+	}
+	.buy-about {
+		margin-right: 0;
+	}
+}
+@media (max-width: 1000px) {
+	.container {
+		max-width: 750px;
+	}
+	.nav-links {
+		column-gap: 20px;
+	}
+	.home-wrapper .home-title {
+		font-size: 35px;
+	}
+	.home-wrapper .home-title em {
+		transform: translate(-30px, 25px);
+	}
+	.home-wrapper .home-txt {
+		font-size: 14px;
+		max-width: 340px;
+	}
+	.buy-cards {
+		flex-wrap: wrap;
+	}
+	.buy-cards .card {
+		max-width: calc(100% / 2 - 15px);
+	}
+	.ingredient {
+		flex-direction: column-reverse;
+		row-gap: 20px;
+	}
+	.ingredient-about {
+		margin: 0 auto;
+	}
+	.about-images {
+		max-width: 100%;
+		justify-content: center;
+	}
+	.footer-wrap h1 {
+		max-width: 200px;
+		font-size: 20px;
+		line-height: 150%;
+	}
+	.footer-links {
+		column-gap: 20px;
+	}
+	.contact-wrap {
+		column-gap: 0;
+		row-gap: 20px;
+		flex-direction: column;
+	}
+	.info-column h4 {
+		min-width: 150px;
+		margin-right: 20px;
+	}
+	.info-column p,
+	.info-column a {
+		max-width: 100%;
+	}
+	.home-main,
+	#proven,
+	#question {
+		background-position: center top;
+	}
+
+	.modal-container .container {
+		max-width: 100%;
+	}
+	.modal-about h1 {
+		font-size: 22px;
+	}
+}
+@media (max-width: 950px) {
+	.modal-content {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+	.modal-content > div {
+		max-width: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.container {
+		max-width: 640px;
+	}
+	.ingredient-images {
+		width: 412px;
+	}
+	.ingredient-images img:last-child {
+		width: 270px;
+		max-height: 363px;
+	}
+}
+@media (max-width: 768px) {
+	.container {
+		max-width: 100%;
+		padding: 0 20px;
+	}
+	.nav-links {
+		display: none;
+	}
+	.buy-cards {
+		gap: 20px;
+	}
+	.card .card-btn {
+		width: 100%;
+	}
+}
+@media (max-width: 741px) {
+	.footer-links {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.footer-wrap h1 {
+		max-width: 450px;
+		padding-right: 20px;
+	}
+	.footer-bottom {
+		column-gap: 0;
+		justify-content: space-between;
+	}
+}
+@media (max-width: 660px) {
+	.buy-about {
+		max-width: 330px;
+		margin-right: 50px;
+	}
+	.buy-about h1 {
+		font-size: 30px;
+		line-height: 130%;
+		margin-bottom: 10px;
+	}
+	.buy-about p {
+		font-size: 13px;
+		line-height: 150%;
+	}
+	.buy-about p br {
+		display: block;
+		height: 5px;
+	}
+	.home-main,
+	#proven,
+	#question {
+		background-attachment: inherit;
+		background-size: cover;
+	}
+	.home-wrapper .home-title {
+		font-size: 30px;
+	}
+}
+@media (max-width: 630px) {
+	.basket-modal-content {
+		margin-top: 60px;
+		padding: 0;
+		max-width: 100%;
+	}
+	.close-bg {
+		background-color: #000000;
+	}
+	.ingredient-images {
+		max-width: 350px;
+	}
+	.about-images {
+		gap: 40px;
+	}
+	.footer-wrap h1 {
+		max-width: 270px;
+	}
+}
+@media (max-width: 570px) {
+	.basket-products .product-list {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		position: relative;
+	}
+
+	.product-list a {
+		max-width: 100%;
+	}
+	.product-list .product-list__left {
+		width: calc(100% - 20px);
+	}
+	.product-list .product-list__right {
+		margin-left: 60px;
+	}
+	.remove-product-btn {
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+	.modal-about button.add-basket {
+		width: 100%;
+	}
+	.modal-container {
+		padding: 0;
+	}
+	.home-wrapper .home-title {
+		line-height: 120%;
+	}
+	.home-wrapper .home-title em {
+		transform: translate(0);
+		display: block;
+	}
+	.close-Xbtn {
+		display: none;
+	}
+	.close-bodal span {
+		display: none;
+	}
+	.close-bodal::before {
+		display: none;
+	}
+	.close-bodal img {
+		display: block;
+	}
+	.home-wrapper .home-txt {
+		margin-top: 40px;
+	}
+	.modal-head {
+		padding: 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+@media (max-width: 540px) {
+	.modal-content {
+		padding: 20px 0;
+	}
+	.footer-bottom {
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	#about .about-title {
+		font-size: 30px;
+	}
+	.ingredient-images {
+		max-width: 300px;
+	}
+	.ingredient-images img:last-child {
+		width: 200px;
+		max-height: 300px;
+		bottom: calc(-100% / 2 + 100px);
+		right: calc(-100% / 2 + 50px);
+	}
+	.ingredient-about h1 {
+		font-size: 25px;
+		line-height: 150%;
+	}
+	.ingredient-about p {
+		font-size: 13px;
+	}
+}
+@media (max-width: 480px) {
+	.basket-modal-body {
+		padding: 20px;
+	}
+	.contact-wrap {
+		padding: 30px 0;
+	}
+	footer {
+		padding: 30px 0;
+	}
+	.footer-wrap h1 {
+		font-size: 17px;
+	}
+	.footer-links {
+		width: 130px;
+		flex-shrink: 0;
+		row-gap: 10px;
+	}
+	.footer-links a {
+		font-size: 13px;
+	}
+	.about-images {
+		margin-top: 20px;
+		gap: 20px;
+	}
+	.about-images img {
+		max-width: 150px;
+	}
+}
+@media (max-width: 450px) {
+	.buy-cards {
+		flex-direction: column;
+	}
+	.buy-cards .card {
+		max-width: 100%;
+	}
+	.proven-title h1 {
+		font-size: 25px;
+		line-height: 160%;
+	}
+	.proven-title h4 {
+		font-size: 16px;
+	}
+}
+@media (max-width: 440px) {
+	.accordion-head {
+		column-gap: 20px;
+		padding: 10px 0;
+	}
+	.accordion-head h2 {
+		line-height: 130%;
+	}
+	.info-column:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	.info-column h4 {
+		min-width: auto;
+		width: 90px;
+		font-size: 14px;
+	}
+	.info-column p,
+	.info-column a {
+		font-size: 13px;
+	}
+	.home-wrapper .home-title {
+		font-size: 25px;
+	}
+	.home-wrapper .home-title em {
+		font-size: 23px;
+	}
+	.ingredient-images img:last-child {
+		width: 127px;
+		height: 194px;
+	}
+	.ingredient-images {
+		width: 264px;
+		height: 325px;
+	}
+	.ingredient {
+		padding-bottom: 140px;
+	}
+}
+@media (max-width: 400px) {
+	.modal-about h1 {
+		font-size: 20px;
+		line-height: 130%;
+	}
+	.modal-about p {
+		font-size: 16px;
+	}
+	.home-wrapper .home-txt {
+		margin-left: 0;
+		max-width: 100%;
+	}
+	.buy-about {
+		margin: 30px 0;
+		max-width: 100%;
+	}
+	.buy-about h1 {
+		font-size: 24px;
+		line-height: 120%;
+	}
+	.proven-title a {
+		font-size: 10px;
+	}
+	.ingredient-images {
+		width: 200px;
+		height: fit-content;
+	}
+	.about-images img {
+		max-width: calc(100% / 2 - 10px);
+	}
 }
