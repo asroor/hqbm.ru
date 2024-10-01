@@ -57,6 +57,9 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	background-color: white;
+	letter-spacing: normal;
+	transition: all 0.3s ease;
+	color: #000;
 }
 a,
 button {
@@ -189,6 +192,7 @@ header .header-wrapper {
 	font-size: 16px;
 	letter-spacing: 160%;
 	color: black;
+	letter-spacing: normal;
 }
 
 .buy-cards .card em {
@@ -477,6 +481,9 @@ footer .footer-wrap {
 .footer-links a {
 	color: #646464;
 	font-size: 16px;
+}
+.footer-links a:first-child {
+	border-bottom: 1px solid #646464;
 }
 
 .footer-bottom {
@@ -992,11 +999,30 @@ b {
 	}
 }
 @media screen and (max-width: 960px) {
+	.footer-wrap h1 {
+		font-size: 20px;
+		line-height: 27px;
+	}
 	.contact-wrap {
 		padding: 10px 0 40px 0;
 	}
+	.footer-bottom {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 190px;
+		margin-top: -140px;
+	}
+	.footer-bottom p:first-child {
+		margin-bottom: 10px;
+	}
+	.footer-bottom p:nth-child(2) {
+		margin-bottom: 45px;
+	}
 	.footer-wrap h1 {
 		max-width: 135px;
+	}
+	footer {
+		padding-top: 50px;
 	}
 	.footer-links {
 		margin-top: 30px;
@@ -1084,8 +1110,8 @@ b {
 	}
 }
 @media screen and (max-width: 670px) {
-	.contact-wrap {
-		padding-left: 20px;
+	.footer-bottom {
+		margin-left: 180px;
 	}
 	.modal-about button.add-basket {
 		width: 100%;
@@ -1097,12 +1123,7 @@ b {
 		justify-content: flex-start;
 		column-gap: 40px;
 	}
-	.footer-links {
-		margin-top: 0;
-		flex-direction: column;
-		row-gap: 10px;
-		align-items: flex-start;
-	}
+
 	.card .card-btn {
 		width: 100%;
 	}
@@ -1110,6 +1131,27 @@ b {
 @media screen and (max-width: 640px) {
 	.contact-wrap {
 		padding-top: 0;
+	}
+	#contact .container,
+	footer .container {
+		max-width: 500px;
+	}
+	footer {
+		padding-bottom: 50px;
+	}
+	.footer-bottom {
+		margin-top: -50px;
+		margin-left: auto;
+		max-width: 300px;
+		margin: 0 auto;
+		padding-left: 85px;
+	}
+	.footer-links {
+		margin-top: 0;
+		flex-direction: column;
+		row-gap: 10px;
+		align-items: flex-start;
+		padding-top: 10px;
 	}
 	.product-list .product-img {
 		height: 70px;
@@ -1275,6 +1317,9 @@ b {
 		width: 100%;
 		height: 100%;
 	}
+	.basket-modal-body {
+		padding-bottom: 70px;
+	}
 	.basket-modal-content {
 		max-width: 100%;
 		padding-top: 0;
@@ -1326,6 +1371,13 @@ b {
 }
 
 @media screen and (max-width: 480px) {
+	.footer-bottom {
+		margin: 0;
+		margin-top: -40px;
+		padding-left: 0;
+		margin-left: 150px;
+		padding-top: 15px;
+	}
 	.info-container:first-child .info-column:nth-child(2) {
 		margin-bottom: 0 !important;
 	}
@@ -1335,7 +1387,8 @@ b {
 	.info-column {
 		align-items: center;
 	}
-	#contact .container, footer .container {
+	#contact .container,
+	footer .container {
 		padding: 0 50px;
 	}
 	.ingredient {
@@ -1343,6 +1396,7 @@ b {
 	}
 	.basket-modal-body {
 		padding: 20px;
+		padding-bottom: 70px;
 	}
 	.modal-head {
 		padding: 10px 20px;
@@ -1351,7 +1405,7 @@ b {
 		padding: 25px 0;
 	}
 	.footer-bottom {
-		gap: 10px;
+		gap: 0;
 	}
 	.footer-wrap h1 {
 		max-width: 70px;
@@ -1359,7 +1413,7 @@ b {
 		line-height: 23px;
 	}
 	.contact-wrap {
-		padding: 25px 0;
+		padding-left: 0;
 	}
 	.info-column p,
 	.info-column a {
@@ -1469,7 +1523,15 @@ b {
 }
 
 @media screen and (max-width: 390px) {
-	#contact .container, footer .container {
+	.footer-bottom {
+		padding: 0;
+		padding-bottom: 10px;
+		margin: 0;
+		margin-top: -40px;
+		margin-left: 120px;
+	}
+	#contact .container,
+	footer .container {
 		padding: 0 20px;
 	}
 	.about-images {
@@ -1495,5 +1557,12 @@ b {
 	}
 	.home-wrapper .home-txt {
 		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#contact .container,
+	footer .container {
+		padding: 0 10px;
 	}
 }
