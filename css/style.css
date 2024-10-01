@@ -992,6 +992,9 @@ b {
 	}
 }
 @media screen and (max-width: 960px) {
+	.contact-wrap {
+		padding: 10px 0 40px 0;
+	}
 	.footer-wrap h1 {
 		max-width: 135px;
 	}
@@ -1081,6 +1084,9 @@ b {
 	}
 }
 @media screen and (max-width: 670px) {
+	.contact-wrap {
+		padding-left: 20px;
+	}
 	.modal-about button.add-basket {
 		width: 100%;
 	}
@@ -1102,6 +1108,9 @@ b {
 	}
 }
 @media screen and (max-width: 640px) {
+	.contact-wrap {
+		padding-top: 0;
+	}
 	.product-list .product-img {
 		height: 70px;
 	}
@@ -1317,6 +1326,21 @@ b {
 }
 
 @media screen and (max-width: 480px) {
+	.info-container:first-child .info-column:nth-child(2) {
+		margin-bottom: 0 !important;
+	}
+	.info-column:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.info-column {
+		align-items: center;
+	}
+	#contact .container, footer .container {
+		padding: 0 50px;
+	}
+	.ingredient {
+		padding-bottom: 150px;
+	}
 	.basket-modal-body {
 		padding: 20px;
 	}
@@ -1445,6 +1469,9 @@ b {
 }
 
 @media screen and (max-width: 390px) {
+	#contact .container, footer .container {
+		padding: 0 20px;
+	}
 	.about-images {
 		column-gap: 0;
 		justify-content: space-between;
